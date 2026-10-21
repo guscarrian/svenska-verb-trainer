@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Basic setup instructions -->  
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"> <!-- This encoding ensures special characters in swedish like å, ä and ö -->
+  <title>Svenska Verbformer Tränare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!-- Adding body and setting up header and å, ä, ö buttons --> 
+<body class="bg-slate-50 text-slate-800 min-h-screen py-10 px-4">
+  <div class="max-w-4xl mx-auto space-y-6">
+
+    <!-- Header --> 
+    <header class="text-center space-y-1">
+      <!-- Swedish Verb Forms (Tenses) --> 
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight">🇸🇪 Svenska Verbformer</h1>
+      <!-- Fill in the missing verb forms and test your knowledge --> 
+      <p class="text-slate-600 text-sm">Fyll i de saknade verbformerna och testa dina kunskaper.</p>
+    </header>
+
+    <!-- Character buttons --> 
+    <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-wrap items-center justify-between gap-3 shadow-sm">
+      <div class="flex items-center gap-2">
+        <!-- Special characters -->
+        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Specialtecken:</span>
+        <div class="flex gap-1.5">
+          <button type="button" onclick="insertChar('å')" class="px-3 py-1 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-300 font-bold rounded-lg text-sm transition">å</button>
+          <button type="button" onclick="insertChar('ä')" class="px-3 py-1 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-300 font-bold rounded-lg text-sm transition">ä</button>
+          <button type="button" onclick="insertChar('ö')" class="px-3 py-1 bg-slate-100 hover:bg-indigo-50 hover:text-indigo-600 border border-slate-300 font-bold rounded-lg text-sm transition">ö</button>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
+<!--  --> 
