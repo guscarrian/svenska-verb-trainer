@@ -81,14 +81,115 @@
     </div>
   </div>
 
-  <!--
+  <!-- List of verbs and tenses -->
   <script>
-  TO DO: 
-  - Add verblist here
-  - List of tenses - column names
-  - id="verb-tense-forms"
+    const verbDatabase = [
+      { imperativ: "drick", infinitiv: "dricka", presens: "dricker", preteritum: "drack", supinum: "druckit" },
+      { imperativ: "ät", infinitiv: "äta", presens: "äter", preteritum: "åt", supinum: "ätit" },
+      { imperativ: "skriv", infinitiv: "skriva", presens: "skriver", preteritum: "skrev", supinum: "skrivit" },
+      { imperativ: "bo", infinitiv: "bo", presens: "bor", preteritum: "bodde", supinum: "bott" }
+      // TO DO: Add the rest of verbs from the list
+    ];
+
+    const tenses = ["imperativ", "infinitiv", "presens", "preteritum", "supinum"];
+    
+    // currentSession stores the verbs shown on the screen and which tense was chosen as the clue for each
+    let currentSession = [];
+
+    // To manage the special characters (å, ä and ö):
+    // activeInput remembers which <input> box the cursor was last inside, so when if you click on any of 
+    // the special characters they are inserted into the correct box
+    let activeInput = null;
+    // when you click or type any text input with the class verb-input
+    // that input field is saved to activeInput
+    document.addEventListener("focusin", (e) => {
+      if (e.target.classList.contains("verb-input")) {
+        activeInput = e.target;
+      }
+    });
+
+    // First check if the input is active and checks where the blinking cursor
+    // is using selectionStart and selectionEnd
+    function insertChar(char) {
+      if (!activeInput) return;
+      const start = activeInput.selectionStart;
+      const end = activeInput.selectionEnd;
+      const val = activeInput.value;
+      
+      // Then the text is splitted in half and the scpecial chars
+      // are added in between. The cursor then moves forward by 1 char
+      activeInput.value = val.substring(0, start) + char + val.substring(end);
+      activeInput.focus();
+      activeInput.setSelectionRange(start + 1, start + 1);
+    }
+
+
+    // To generate the table dynamically:
+    // We need a function to run automatically when the page loads
+    // and also when the user clicks on the button Blanda om
+    function initTable() {
+      const tbody = document.getElementById("verb-tense-forms");
+      tbody.innerHTML = ""; // To clear any old rows
+      
+      // First we shuffle the database of verbs and randomly pick 10 (it can be adjusted for more or less verbs)
+      const shuffled = [...verbDatabase].sort(() => 0.5 - Math.random()).slice(0, 10);
+      currentSession = [];
+
+      // Then we loop over each verb
+      shuffled.forEach((verb, index) => {
+        // and pick one random tense
+        const clueTense = tenses[Math.floor(Math.random() * tenses.length)];
+        currentSession.push({ verb, clueTense });
+
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-slate-50 transition";
+
+        let html = `<td class="p-3 text-center text-xs text-slate-400 font-mono">${index + 1}</td>`;
+
+        // We create 5 table cells, one for each tense
+        tenses.forEach(tense => {
+          if (tense === clueTense) {
+            // If this is the clue tense, show it as static highlighted text
+            html += `
+              <td class="p-2.5">
+                <span class="inline-block w-full py-1.5 px-2 bg-indigo-50 text-indigo-900 font-semibold rounded-lg border border-indigo-100">
+                  ${verb[tense]}
+                </span>
+              </td>`;
+          } else {
+            // otherwise, make it a blank text box for the user to type in
+            html += `
+              <td class="p-2.5">
+                <input 
+                  type="text" 
+                  data-row="${index}" 
+                  data-tense="${tense}" 
+                  autocomplete="off"
+                  class="verb-input w-full py-1.5 px-2 bg-white border border-slate-300 rounded-lg text-slate-900 font-medium focus:ring-2 focus:ring-indigo-500 focus:outline-none transition text-sm"
+                  placeholder="..."
+                />
+              </td>`;
+          }
+        });
+
+        tr.innerHTML = html;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById("test-score").textContent = "Status: Fyll i fälten och klicka på 'Rätta svar'."; //Status: Fill in the fields and click 'Check answers'.
+    }
+
+
+ 
+
   
   </script> 
+  
+  <!--
+  TO DO: 
+  - Checking user's answer -- rätta svar
+  - Showing answers
+  - reset page?
   -->
 
 
