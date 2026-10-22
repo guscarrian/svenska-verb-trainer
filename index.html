@@ -33,6 +33,65 @@
       </div>
     </div>
 
+    <!-- Table -->
+    <!-- Instead of hard-coding a tabke with X number of rows manually in HTML, it's smarter to write only the -->
+    <!-- table headers in HTML. If we leave the body empty, we can use Javascript to dinamically generate the -->
+    <!-- rows we need from our verb list (below) -->
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="bg-slate-100 border-b border-slate-200 text-slate-700 font-bold">
+              <th class="p-3 w-12 text-center text-slate-400">#</th>
+              <!-- 5 main tense forms -->
+              <th class="p-3">Imperativ</th>
+              <th class="p-3">Infinitiv</th>
+              <th class="p-3">Presens</th>
+              <th class="p-3">Preteritum</th>
+              <th class="p-3">Supinum</th>
+            </tr>
+          </thead>
+          <tbody id="verb-tense-forms" class="divide-y divide-slate-100">
+            <!-- JavaScript will insert the rows here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Action buttons and test score footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+        <!-- Status: Not yet corrected -->
+        <div id="test-score" class="text-sm font-semibold text-slate-700">
+          Status: Inte rättat ännu
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <!-- Button -> Shuffle/New round -->
+          <button type="button" onclick="resetPractice()" class="px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-200 rounded-xl transition">
+            Blanda om / Ny omgång
+          </button>
+          <!-- Button -> Show answers -->
+          <button type="button" onclick="showAnswers()" class="px-4 py-2 text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white rounded-xl shadow-sm transition">
+            Visa svar
+          </button>
+          <!-- Button -> Correct answers -->
+          <button type="button" onclick="checkAnswers()" class="px-5 py-2 text-sm font-bold bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-sm transition">
+            Rätta svar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+  <script>
+  TO DO: 
+  - Add verblist here
+  - List of tenses - column names
+  - id="verb-tense-forms"
+  
+  </script> 
+  -->
+
+
 </body>
 </html>
 <!--  --> 
