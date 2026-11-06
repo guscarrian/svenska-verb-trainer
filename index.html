@@ -179,20 +179,70 @@
       document.getElementById("test-score").textContent = "Status: Fyll i fälten och klicka på 'Rätta svar'."; //Status: Fill in the fields and click 'Check answers'.
     }
 
+    
+    // This function is to check the user's answers - when clicking 'rätta svar'
+    function checkAnswers() {
+      // We grab all input boxes that are currently on the screen
+      const inputs = document.querySelectorAll(".verb-input");
+      let correct = 0;
+      let total = inputs.length;
 
- 
+      inputs.forEach(input => {
+        // For each input read the metadata we attached earlier
+        const row = input.dataset.row;
+        const tense = input.dataset.tense;
 
-  
+        // We now find what was expected vs. what the user typed
+        const expected = currentSession[row].verb[tense].trim().toLowerCase();
+        const userVal = input.value.trim().toLowerCase();
+
+        // We reset any previous green/red styling
+        input.classList.remove("border-slate-300", "border-emerald-500", "bg-emerald-50", "text-emerald-900", "border-rose-400", "bg-rose-50", "text-rose-900");
+
+        // Now we compare the input
+        if (userVal === expected) {
+          correct++;
+          // Changing the color classes on the input (green) when right answer
+          input.classList.add("border-emerald-500", "bg-emerald-50", "text-emerald-900");
+        } else {
+          // Turns input red when wrong answer
+          input.classList.add("border-rose-400", "bg-rose-50", "text-rose-900");
+        }
+      });
+
+      // We update the score text
+      const scoreEl = document.getElementById("score-display");
+      scoreEl.innerHTML = `Resultat: <span class="font-bold text-indigo-600">${correct} / ${total}</span> rätt (${Math.round((correct / total) * 100)}%)`;
+    }
+
+
+    // Revealing answers and initializing page
+    function showAnswers() {
+      const inputs = document.querySelectorAll(".verb-input");
+      inputs.forEach(input => {
+        const row = input.dataset.row;
+        const tense = input.dataset.tense;
+        // We overwrite whatever is in the box with the real answer
+        input.value = currentSession[row].verb[tense];
+        input.classList.remove("border-rose-400", "bg-rose-50", "text-rose-900", "border-slate-300");
+        input.classList.add("border-amber-400", "bg-amber-50", "text-amber-900"); // Turn amber
+      });
+      document.getElementById("score-display").textContent = "Visar alla korrekta svar.";
+    }
+
+    function resetPractice() {
+      initTable();
+    }
+
+    // When the browser finishes loading the HTML structure, run initTable() immediately
+    window.addEventListener("DOMContentLoaded", initTable);
+
   </script> 
   
   <!--
-  TO DO: 
-  - Checking user's answer -- rätta svar
-  - Showing answers
-  - reset page?
+  TO DO:
+  - automatizing adding new verbs
   -->
-
 
 </body>
 </html>
-<!--  --> 
