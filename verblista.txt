@@ -31,3 +31,349 @@ köpa
 diska
 resa
 ha
+########### LATEST ADDITION ###########
+analysera
+anteckna
+arbeta
+argumentera
+arrangera
+bada
+baka
+betala
+bifoga
+blippa
+bläddra
+boka
+bowla
+bruka
+bråka
+bädda
+chatta
+checka in
+dejta
+dela
+doktorera
+duka
+duscha
+döda
+elda
+emigrera
+exportera
+fantisera
+festa
+fika
+finansiera
+fira
+fiska
+fixa
+flytta
+fokusera
+forska
+fråga
+fundera
+fundera på
+funka
+förklara
+förlora
+gilla
+gissa
+glittra
+grilla
+handla om
+hitta
+hoppa
+hoppa av
+hosta
+hota
+hälsa
+hälsa på
+hämta
+imitera
+improvisera
+inspirera
+intervjua
+introducera
+jaga
+jobba
+jogga
+kasta
+klara
+klicka
+klättra
+klättra upp
+koka
+kolla
+kolla upp
+kombinera
+komplettera
+konsumera
+kontakta
+kontrollera
+kopiera
+koppla
+koppla av
+kosta
+krascha
+kratta löv
+krya på sig
+kryssa i/för
+ladda
+ladda ner
+laga
+landa
+lansera
+leta
+logga
+lova
+lukta
+lyssna
+låna
+lämna
+lämna tillbaka
+längta
+markera
+mejla
+messa
+mingla
+minska
+missa
+missa tåget
+motionera
+motivera
+måla
+måla om
+nicka
+odla
+orka
+oroa (sig)
+orsaka
+packa
+parkera
+passa
+peka
+placera
+plantera
+plocka
+plugga
+presentera
+producera
+programmera
+promenera
+prova
+pröva
+påverka
+ramla
+redigera
+regna
+renovera
+reparera
+repetera
+ringa in
+rädda
+räkna
+samla
+segla
+separera
+servera
+shoppa
+skejta
+skolka
+skydda
+skynda sig
+skåla
+skämta
+slappa
+sluta
+smaka
+småprata
+snacka
+snusa
+snöa
+sola
+somna
+sortera
+spara
+spendera
+stanna
+starta
+starta om
+stava
+stoppa in
+stötta
+strejka
+städa
+sucka
+svara
+tala
+testa
+tipsa
+tjäna
+torka
+träna
+tröttna
+tvätta
+tälta
+tävla
+undervisa
+undra
+uttala
+utveckla
+vabba
+vandra
+variera
+verka
+verka som
+vila
+visa
+vänta
+ångra
+åska
+älska
+ändra
+öka
+öva
+använda
+behöva
+beställa
+beställa tid
+bestämma
+betyda
+bygga
+dröja
+fylla
+fylla på
+följa
+följa med
+förbereda
+glömma
+hälla
+hända
+hänga
+hänga med
+känna
+känna sig
+känna igen
+känna till
+leva
+skilja sig
+slänga
+ställa
+stämma
+stänga av
+stödja
+tända
+äga
+äga rum
+besöka
+blåsa
+byta
+försöka
+gifta sig
+klippa
+leka
+läsa
+misstänka
+mysa
+räcka
+släcka
+söka
+trycka
+tycka
+tycka om
+tänka
+växa (upp)
+åka iväg
+hyra
+höra
+jämföra
+köra
+lära sig
+röra på sig
+tillhöra
+bero på
+klä på sig
+må
+tro
+be
+beskriva
+bjuda
+bli
+bli över
+dra
+dra in
+dyka
+dö
+flyga
+fortsätta
+frysa
+få
+föreslå
+försova sig
+förstå
+ge
+ge upp
+gå av
+gå upp
+göra ont
+göra slut
+heta
+hinna
+hugga
+hålla
+hålla igång
+hålla med
+kliva ur
+komma
+komma ihåg
+kunna
+ligga
+ljuga
+låta
+lägga
+lägga sig
+lägga undan
+omkomma
+rida
+se ut
+sitta
+sjunga
+skina
+skjuta
+slå
+sova
+springa
+springa vilse
+stiga upp
+stryka
+stryka under
+stå stilla
+säga
+säga till
+sälja
+sätta
+ta
+ta med
+uppta
+veta
+vilja
+vinna
+välja
+återkomma
+finnas
+födas
+hoppas
+höras
+minnas
+ses
+slåss
+trivas
+träffas
+umgås
+behöva
+böra
+bruka
+hinna
+måste
+orka
+skola
+vilja
